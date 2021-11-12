@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styled from 'styled-components/native';
+import TabBarIcon from '../components/TabBarIcon';
 
 const Page = styled.SafeAreaView`
   flex: 1;
@@ -42,6 +43,9 @@ const Screen = props => {
 Screen.navigationOptions = ({navigation}) => {
   return {
     title: 'Login',
+    tabBarIcon: ({focused}) => (
+      <TabBarIcon focused={focused} route="Login" badge={5} />
+    ),
   };
 };
 
