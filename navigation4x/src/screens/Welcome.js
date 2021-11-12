@@ -22,13 +22,7 @@ const LogoHeader = styled.Image`
 const Screen = props => {
   return (
     <Page>
-      <WelcomeText>
-        Seja bem-vindo{' '}
-        {props.navigation.state.params
-          ? props.navigation.state.params.name
-          : ''}
-        !
-      </WelcomeText>
+      <WelcomeText>Seja bem-vindo(a)!</WelcomeText>
     </Page>
   );
 };
@@ -39,15 +33,16 @@ Screen.navigationOptions = ({navigation}) => {
   };
 
   return {
-    headerTitle: () => <Title />,
-    headerRight: () => (
-      <Button
-        title="Login"
-        onPress={() => {
-          navigation.navigate('Login');
-        }}
-      />
-    ),
+    // headerTitle: () => <Title />,
+    // headerRight: () => (
+    //   <Button
+    //     title="Login"
+    //     onPress={() => {
+    //       navigation.navigate('Login');
+    //     }}
+    //   />
+    // ),
+    title: 'Bem-vindo(a)',
   };
 };
 

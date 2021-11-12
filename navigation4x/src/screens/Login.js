@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components/native';
 
 const Page = styled.SafeAreaView`
@@ -39,9 +39,9 @@ const Screen = props => {
   );
 };
 
-Screen.navigationOptions = () => {
+Screen.navigationOptions = ({navigation}) => {
   return {
-    title: 'Tela de login',
+    title: 'Login',
   };
 };
 
