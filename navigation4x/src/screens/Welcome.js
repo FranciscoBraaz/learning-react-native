@@ -19,6 +19,17 @@ const LogoHeader = styled.Image`
   height: 60px;
 `;
 
+const Square = styled.View`
+  background-color: blueviolet;
+  width: 30px;
+  height: 30px;
+`;
+
+const IconHome = styled.Image`
+  width: 30px;
+  height: 30px;
+`;
+
 const Screen = props => {
   return (
     <Page>
@@ -42,7 +53,14 @@ Screen.navigationOptions = ({navigation}) => {
     //     }}
     //   />
     // ),
-    title: 'Bem-vindo(a)',
+    tabBarLabel: 'Olá',
+    tabBarIcon: ({focused, tintColor}) => {
+      if (focused) {
+        return <IconHome source={require('../assets/home-active.png')} />;
+      } else {
+        return <IconHome source={require('../assets/home-inactive.png')} />;
+      }
+    },
   };
 };
 

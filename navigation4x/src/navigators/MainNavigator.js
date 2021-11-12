@@ -44,6 +44,9 @@ const MainNavigator = createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: 'blueviolet',
       inactiveTintColor: '#000',
+      labelStyle: {
+        fontSize: 18,
+      },
     },
   },
 );
