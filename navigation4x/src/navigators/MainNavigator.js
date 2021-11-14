@@ -2,6 +2,7 @@
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import Login from '../screens/Login';
 import Welcome from '../screens/Welcome';
+import HomeDrawer from './HomeDrawer';
 import HomeStack from './HomeStack';
 
 // const MainNavigator = createStackNavigator(
@@ -35,7 +36,7 @@ import HomeStack from './HomeStack';
 const MainNavigator = createBottomTabNavigator(
   {
     Welcome: {
-      screen: HomeStack,
+      screen: HomeDrawer,
     },
     Login: {
       screen: Login,
