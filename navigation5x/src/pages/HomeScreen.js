@@ -6,10 +6,17 @@ import {TextInput} from 'react-native-gesture-handler';
 export function HomeScreen() {
   const navigation = useNavigation();
   const [name, setName] = useState('');
+  const [title, setTitle] = useState('');
 
   function handleSubmit() {
     navigation.navigate('Sobre', {
       name,
+    });
+  }
+
+  function handleChangeHeader() {
+    navigation.setOptions({
+      title,
     });
   }
 
@@ -22,6 +29,12 @@ export function HomeScreen() {
         onChangeText={value => setName(value)}
       />
       <Button title="Enviar" onPress={handleSubmit} />
+      <TextInput
+        style={styles.input}
+        value={title}
+        onChangeText={value => setTitle(value)}
+      />
+      <Button title="Alterar Header" onPress={handleChangeHeader} />
     </View>
   );
 }
