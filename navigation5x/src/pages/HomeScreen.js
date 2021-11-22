@@ -53,6 +53,7 @@ export function HomeScreen() {
       />
       <Button title="Alterar Header" onPress={handleChangeHeader} />
       <Button title="+ 1" onPress={() => setCount(count + 1)} />
+      <Button title="Fazer bolo" onPress={() => navigation.navigate('Bolo')} />
     </View>
   );
 }

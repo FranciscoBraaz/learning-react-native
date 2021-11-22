@@ -2,6 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {HomeScreen} from '../pages/HomeScreen';
 import {AboutScreen} from '../pages/AboutsScreen';
+import CakeScreen from '../pages/CakeScreen';
 
 const {Navigator, Screen} = createStackNavigator();
 
@@ -29,6 +30,7 @@ export function MainStack() {
           title: route.params.name,
         })}
       />
+      <Screen name="Bolo" component={CakeScreen} />
     </Navigator>
   );
 }
