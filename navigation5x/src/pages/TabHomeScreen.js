@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 export function TabHomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={{fontSize: 20}}>TabHome - Bem-vindo</Text>
+      <Text style={{fontSize: 20}}>Tela Home</Text>
     </View>
   );
 }

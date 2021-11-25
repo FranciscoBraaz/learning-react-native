@@ -1,10 +1,10 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-export function TabAboutScreen() {
+export function TabConfigScreen() {
   return (
     <View style={styles.container}>
-      <Text style={{fontSize: 20}}>Tela About</Text>
+      <Text style={{fontSize: 20}}>Tela Configurações</Text>
     </View>
   );
 }
