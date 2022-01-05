@@ -1,10 +1,10 @@
 import {combineReducers, createStore} from 'redux';
 import {persistStore, persistReducer} from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import contador from '../reducers/contador';
+import notes from '../reducers/notes';
 import hardSet from 'redux-persist/lib/stateReconciler/hardSet';
 
-const reducer = combineReducers({contador});
+const reducer = combineReducers({notes});
 
 const persistedReducer = persistReducer(
   {
